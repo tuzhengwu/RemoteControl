@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="signal_mode">
+        <item>信令模式</item>
+        <item>TDMA模式</item>
+        <item>FDMA模式</item>
+        <item>CDMA模式</item>
+        <item>抗旋翼模式</item>
+        <item>馈电模式</item>
+        <item>TDMA抗干扰模式</item>
+        <item>FDMA抗干扰模式</item>
+        <item>低速抗干扰</item>
+        <item>中速抗干扰</item>
+        <item>高速抗干扰</item>
+    </string-array>
+</resources>

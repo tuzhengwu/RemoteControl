@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_marginTop="20dp"
+                android:background="@color/black2" />
+
+            <TextView
+                android:id="@+id/txt_protocol_set"
+                style="@style/TxtTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/setting_item_selector"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/right"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/protocol_set"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <TextView
+                android:id="@+id/txt_protocol_get"
+                style="@style/TxtTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/setting_item_selector"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/right"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/protocol_get"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <TextView
+                android:id="@+id/txt_protocol_report"
+                style="@style/TxtTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/setting_item_selector"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/right"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/protocol_report"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <TextView
+                android:id="@+id/txt_test"
+                style="@style/TxtTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/setting_item_selector"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/right"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/test_mode"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <TextView
+                android:id="@+id/txt_test_report"
+                style="@style/TxtTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/setting_item_selector"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/right"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="测试模式状态"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <TextView
+                android:id="@+id/txt_routing"
+                style="@style/TxtTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/setting_item_selector"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/right"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/routing_transfer"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <TextView
+                android:id="@+id/txt_upgrade"
+                style="@style/TxtTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/setting_item_selector"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/right"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/software_upgrade"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

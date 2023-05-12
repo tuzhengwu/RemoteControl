@@ -1,0 +1,1289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include android:id="@+id/layout_title"  layout="@layout/layout_title"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TxtTitle"
+                android:textSize="10sp"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:text="宽带调制参数设置"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_modset_workmode"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="16dp"
+                    android:text="工作模式"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_modset_workmode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text2"
+                    android:layout_toRightOf="@id/text1"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_modset_sendrate"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="发信息速率"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_modset_sendrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text4"
+                    android:layout_toRightOf="@id/text3"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_modset_centerfreq"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="中心频率"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_modset_centerfreq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text6"
+                    android:layout_toRightOf="@id/text5"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/text6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+            <RelativeLayout
+                android:id="@+id/re_modset_outdbm"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="输出电平"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_modset_outdbm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text8"
+                    android:layout_toRightOf="@id/text7"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/text8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="载波开关"
+                    android:textSize="16sp"
+                    android:paddingLeft="6dp" />
+
+                <CheckBox
+                    android:id="@+id/check_carrier"
+                    android:layout_width="50dp"
+                    android:checked="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomCheckboxTheme" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="单载波开关"
+                    android:textSize="16sp"
+                    android:paddingLeft="6dp" />
+
+                <CheckBox
+                    android:id="@+id/check_singlecarrier"
+                    android:layout_width="50dp"
+                    android:checked="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomCheckboxTheme" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="测试开关"
+                    android:textSize="16sp"
+                    android:paddingLeft="6dp" />
+
+                <CheckBox
+                    android:id="@+id/check_modtest"
+                    android:layout_width="50dp"
+                    android:checked="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomCheckboxTheme" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="频谱倒置开关"
+                    android:textSize="16sp"
+                    android:paddingLeft="6dp" />
+
+                <CheckBox
+                    android:id="@+id/check_spectruminversion"
+                    android:layout_width="50dp"
+                    android:checked="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomCheckboxTheme" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_broadmodset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_bg_red2"
+                android:onClick="exitGroup"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:text="宽带调制设置"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <TextView
+                style="@style/TxtTitle"
+                android:textSize="10sp"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:text="宽带解调参数设置"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_demset_workmode"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="16dp"
+                    android:text="工作模式"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_demset_workmode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text10"
+                    android:layout_toRightOf="@id/text9"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/text10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_demset_recvrate"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="收信息速率"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_demset_recvrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text12"
+                    android:layout_toRightOf="@id/text11"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_demset_centerfreq"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="中心频率"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_demset_centerfreq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text14"
+                    android:layout_toRightOf="@id/text13"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="测试开关"
+                    android:textSize="16sp"
+                    android:paddingLeft="6dp" />
+
+                <CheckBox
+                    android:id="@+id/check_demtest"
+                    android:layout_width="50dp"
+                    android:checked="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomCheckboxTheme" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="误码清零"
+                    android:textSize="16sp"
+                    android:paddingLeft="6dp" />
+
+                <CheckBox
+                    android:id="@+id/check_errorzero"
+                    android:layout_width="50dp"
+                    android:checked="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomCheckboxTheme" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="帧计数清零"
+                    android:textSize="16sp"
+                    android:paddingLeft="6dp" />
+
+                <CheckBox
+                    android:id="@+id/check_framnumzero"
+                    android:layout_width="50dp"
+                    android:checked="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomCheckboxTheme" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <Button
+                android:id="@+id/btn_broaddemset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_bg_red2"
+                android:onClick="exitGroup"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:text="宽带解调设置"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/TxtTitle"
+                android:textSize="10sp"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:text="抗强调制参数设置"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_antimodset_workmode"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="16dp"
+                    android:text="工作模式"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_antimodset_workmode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text16"
+                    android:layout_toRightOf="@id/text15"
+                    android:gravity="right"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/text16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_antimodset_rate"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="信息速率"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_antimodset_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text18"
+                    android:layout_toRightOf="@id/text17"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/text18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_antimodset_centerfreq"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="中心频率"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_antimodset_centerfreq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text20"
+                    android:layout_toRightOf="@id/text19"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/text20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/re_antimodset_outdbm"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="输出电平"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_antimodset_outdbm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text22"
+                    android:layout_toRightOf="@id/text21"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/text22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="载波开关"
+                    android:textSize="16sp"
+                    android:paddingLeft="6dp" />
+
+                <CheckBox
+                    android:id="@+id/check_anti_carrier"
+                    android:layout_width="50dp"
+                    android:checked="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomCheckboxTheme" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="单载波开关"
+                    android:textSize="16sp"
+                    android:paddingLeft="6dp" />
+
+                <CheckBox
+                    android:id="@+id/check_anti_singlecarrier"
+                    android:layout_width="50dp"
+                    android:checked="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomCheckboxTheme" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="测试开关"
+                    android:textSize="16sp"
+                    android:paddingLeft="6dp" />
+
+                <CheckBox
+                    android:id="@+id/check_anti_modtest"
+                    android:layout_width="50dp"
+                    android:checked="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomCheckboxTheme" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="频谱倒置开关"
+                    android:textSize="16sp"
+                    android:paddingLeft="6dp" />
+
+                <CheckBox
+                    android:id="@+id/check_anti_spectruminversion"
+                    android:layout_width="50dp"
+                    android:checked="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomCheckboxTheme" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_antimodset_timeslot"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="时隙号"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_antimodset_timeslot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text24"
+                    android:layout_toRightOf="@id/text23"
+                    android:gravity="right"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_antimodset_carrierwave"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="载波号"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_antimodset_carrierwave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text26"
+                    android:layout_toRightOf="@id/text25"
+                    android:gravity="right"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <Button
+                android:id="@+id/btn_antimodset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_bg_red2"
+                android:onClick="exitGroup"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:text="抗强调制设置"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/TxtTitle"
+                android:textSize="10sp"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:text="抗强解调参数设置"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_antidemset_workmode"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="工作模式"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_antidemset_workmode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text28"
+                    android:layout_toRightOf="@id/text27"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/text28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_antidemset_rate"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="信息速率"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_antidemset_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text30"
+                    android:layout_toRightOf="@id/text29"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/text30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_antidemset_centerfreq"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/text31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="中心频率"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_antidemset_centerfreq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/text32"
+                    android:layout_toRightOf="@id/text31"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/text32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="测试开关"
+                    android:textSize="16sp"
+                    android:paddingLeft="6dp" />
+
+                <CheckBox
+                    android:id="@+id/check_anti_demtest"
+                    android:layout_width="50dp"
+                    android:checked="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomCheckboxTheme" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="误码清零"
+                    android:textSize="16sp"
+                    android:paddingLeft="6dp" />
+
+                <CheckBox
+                    android:id="@+id/check_anti_errorzero"
+                    android:layout_width="50dp"
+                    android:checked="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomCheckboxTheme" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="帧计数清零"
+                    android:textSize="16sp"
+                    android:paddingLeft="6dp" />
+
+                <CheckBox
+                    android:id="@+id/check_anti_framnumzero"
+                    android:layout_width="50dp"
+                    android:checked="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomCheckboxTheme" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <Button
+                android:id="@+id/btn_antidemset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_bg_red2"
+                android:onClick="exitGroup"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:text="抗强解调设置"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

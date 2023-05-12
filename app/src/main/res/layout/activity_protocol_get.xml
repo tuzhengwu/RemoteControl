@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include android:id="@+id/layout_title"  layout="@layout/layout_title"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TxtTitle"
+                android:textSize="10sp"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:text="位置参数"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/earth_longitude"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_earth_longitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/earth_latitude"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_earth_latitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/satellite_longitude"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_satellite_longitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/TxtTitle"
+                android:textSize="10sp"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:text="访控参数"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/rev_rate"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_rev_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/send_rate"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_send_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/ip_rev_bytes"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_ip_rev_bytes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/ip_send_bytes"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_ip_send_bytes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/run_status"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_run_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/mode"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/software_version"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_software_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/work_status"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_work_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/satellite_num"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_satellite_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/port_num"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_port_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/mtu"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_mtu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/channel_num"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_channel_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/channel_unit"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_channel_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/channel_status"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_channel_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_marginTop="20dp"
+                android:background="@color/black2" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

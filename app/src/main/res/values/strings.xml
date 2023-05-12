@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">远程控制</string>
+    <string name="chat">短消息</string>
+    <string name="wechat_id">微信号</string>
+    <string name="recommended_friends">新的朋友</string>
+    <string name="group_chats">群聊</string>
+    <string name="official_accounts">订阅号</string>
+    <string name="no_msg">暂时没有新消息</string>
+    <string name="my_posts">相册</string>
+    <string name="collection">收藏</string>
+    <string name="wallet">钱包</string>
+    <string name="card_bag">卡包</string>
+    <string name="expression2">表情</string>
+    <string name="main">主页</string>
+    <string name="call">电话</string>
+    <string name="settings">设置</string>
+    <string name="contacts">通讯录</string>
+    <string name="discover">发现</string>
+    <string name="me">我</string>
+    <string name="moments">朋友圈</string>
+    <string name="scan">扫一扫</string>
+    <string name="shake2">摇一摇</string>
+    <string name="people_nearby">附近的人</string>
+    <string name="drift_bottle">漂流瓶</string>
+    <string name="shopping">购物</string>
+    <string name="games">游戏</string>
+
+    <string name="menu_groupchat">发起群聊</string>
+    <string name="menu_addfriend">添加朋友</string>
+    <string name="menu_qrcode">扫一扫</string>
+    <string name="menu_money">微信支付</string>
+
+    <string name="protocol_set">协议设置</string>
+    <string name="protocol_get">协议查询</string>
+    <string name="protocol_report">主动上报</string>
+    <string name="test_mode">测试模式</string>
+    <string name="routing_transfer">路由转发</string>
+    <string name="software_upgrade">软件升级</string>
+
+    <string name="location">位置信息</string>
+    <string name="earth_longitude">地球站经度</string>
+    <string name="earth_latitude">地球站纬度</string>
+    <string name="satellite_longitude">卫星经度</string>
+    <string name="work_mode">工作模式</string>
+    <string name="manage_net">管理网口</string>
+    <string name="mac_addr">MAC地址</string>
+    <string name="channel_unit">信道单元地址</string>
+    <string name="test_switch">测试开关</string>
+
+    <string name="rev_rate">接收速率</string>
+    <string name="send_rate">发送速率</string>
+    <string name="ip_send_bytes">IP发送字节数</string>
+    <string name="ip_rev_bytes">IP接收字节数</string>
+    <string name="run_status">运行状态</string>
+    <string name="mode">工作模式</string>
+    <string name="software_version">软件版本</string>
+    <string name="work_status">工作状态</string>
+    <string name="satellite_num">卫星号</string>
+    <string name="port_num">端口号</string>
+    <string name="mtu">最大包长</string>
+    <string name="channel_num">信道序列号</string>
+    <string name="channel_status">信道忙闲</string>
+
+    <string name="param_set_failed">失败</string>
+    <string name="param_set_success">成功</string>
+</resources>

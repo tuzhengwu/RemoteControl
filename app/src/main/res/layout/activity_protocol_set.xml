@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include android:id="@+id/layout_title"  layout="@layout/layout_title"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TxtTitle"
+                android:textSize="10sp"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:text="位置信息"/>
+
+            <RelativeLayout
+                android:id="@+id/re_earthlongitude"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/textview1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="16dp"
+                    android:text="地球站经度"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_earthlongitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/textview2"
+                    android:layout_toRightOf="@id/textview1"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/textview2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="2dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_earthLatitude"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/textview11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="地球站纬度"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_earthLatitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/textview12"
+                    android:layout_toRightOf="@id/textview11"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/textview12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="2dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_satellitelogitude"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/textview13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="卫星经度"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_satellitelogitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/textview14"
+                    android:layout_toRightOf="@id/textview13"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/textview14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="2dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <Button
+                android:id="@+id/btn_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_bg_red2"
+                android:onClick="exitGroup"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:text="位置信息设置"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_work_mode"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/textview3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="16dp"
+                    android:text="@string/work_mode"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_work_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/textview4"
+                    android:layout_toRightOf="@id/textview3"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/textview4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="2dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <Button
+                android:id="@+id/btn_workmode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_bg_red2"
+                android:onClick="exitGroup"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:text="工作模式设置"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_manage_net"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/textview5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/manage_net"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_manage_net"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/textview6"
+                    android:layout_toRightOf="@id/textview5"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/textview6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="2dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <Button
+                android:id="@+id/btn_managenet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_bg_red2"
+                android:onClick="exitGroup"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:text="管理网口设置"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_mac_addr"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/textview7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/mac_addr"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_mac_addr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/textview8"
+                    android:layout_toRightOf="@id/textview7"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/textview8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="2dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <Button
+                android:id="@+id/btn_macaddr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_bg_red2"
+                android:onClick="exitGroup"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:text="Mac地址设置"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:id="@+id/re_channel_unit"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/textview9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/channel_unit"
+                    android:textSize="16sp"
+                    android:paddingLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_channel_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/textview10"
+                    android:layout_toRightOf="@id/textview9"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/textview10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="2dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:drawableRight="@drawable/right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <Button
+                android:id="@+id/btn_channelunit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_bg_red2"
+                android:onClick="exitGroup"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:text="信道单元地址设置"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/test_switch"
+                    android:textSize="16sp"
+                    android:paddingLeft="6dp" />
+
+                <CheckBox
+                    android:id="@+id/check_top"
+                    style="@style/CustomCheckboxTheme"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:checked="false" />
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/black2" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

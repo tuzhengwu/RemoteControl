@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cetc7.remotecontrol">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.ProtocolSetActivity"/>
+        <activity android:name=".view.activity.ProtocolGetActivity"/>
+        <activity android:name=".view.activity.ProtocolReportActivity"/>
+        <activity android:name=".view.activity.TestSetActivity"/>
+
+        <activity android:name=".view.activity.ListViewActivity"/>
+        <activity android:name=".view.activity.ParamSetActivity"/>
+        <activity android:name=".view.activity.PublicActivity"/>
+    </application>
+
+</manifest>
