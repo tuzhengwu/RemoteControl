@@ -72,15 +72,15 @@ public class ListViewAdpter extends BaseAdapter {
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder viewHolder = null;
+        ViewHolder2 viewHolder = null;
         if (convertView == null){
             convertView = LayoutInflater.from(mContext).inflate(R.layout.item_listview,parent,false);
-            viewHolder = new ViewHolder();
+            viewHolder = new ViewHolder2();
             viewHolder.text = (TextView) convertView.findViewById(R.id.item_list_text);
             viewHolder.check = (TextView) convertView.findViewById(R.id.item_list_check);
             convertView.setTag(viewHolder);
         }else {
-            viewHolder = (ViewHolder) convertView.getTag();
+            viewHolder = (ViewHolder2) convertView.getTag();
         }
         viewHolder.text.setText(stringList.get(position));
         if (GloableParams.selectPosition == position){
@@ -92,7 +92,7 @@ public class ListViewAdpter extends BaseAdapter {
     }
 }
 
-class ViewHolder{
+class ViewHolder2{
     TextView text;
     TextView check;
 }

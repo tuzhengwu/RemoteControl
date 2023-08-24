@@ -9,12 +9,19 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.cetc7.remotecontrol.common.Utils;
 import com.cetc7.remotecontrol.communication.UDPSocket;
+import com.cetc7.remotecontrol.view.activity.NewFriendActivity;
+import com.cetc7.remotecontrol.view.activity.NewMsgActivity;
 import com.cetc7.remotecontrol.view.fragment.Fragment_Call;
 import com.cetc7.remotecontrol.view.fragment.Fragment_Friends;
 import com.cetc7.remotecontrol.view.fragment.Fragment_Main;
 import com.cetc7.remotecontrol.view.fragment.Fragment_Msg;
 import com.cetc7.remotecontrol.view.fragment.Fragment_Setting;
+
+import org.apache.http.message.BasicNameValuePair;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -78,7 +85,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
         imagebuttons = new ImageView[5];
         imagebuttons[0] = (ImageView) findViewById(R.id.ib_main);
-        imagebuttons[1] = (ImageView) findViewById(R.id.ib_weixin);
+        imagebuttons[1] = (ImageView) findViewById(R.id.ib_message);
         imagebuttons[2] = (ImageView) findViewById(R.id.ib_contact_list);
         imagebuttons[3] = (ImageView) findViewById(R.id.ib_call);
         imagebuttons[4] = (ImageView) findViewById(R.id.ib_setting);
@@ -91,6 +98,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         textviews[3] = (TextView) findViewById(R.id.tv_call);
         textviews[4] = (TextView) findViewById(R.id.tv_setting);
         textviews[0].setTextColor(0xFF45C01A);
+        txt_title.setText(R.string.main);
 
         //添加显示第一个fragment
         getSupportFragmentManager().beginTransaction()
@@ -111,13 +119,23 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 index = 0;
                 txt_title.setText(R.string.main);
                 break;
-            case R.id.re_weixin:
+            case R.id.re_message:
+                img_right.setVisibility(View.VISIBLE);
                 index = 1;
+                if(msgfragment!=null){
+                    msgfragment.refresh();
+                }
                 txt_title.setText(R.string.chat);
+                img_right.setImageResource(R.drawable.icon_add);
                 break;
             case R.id.re_contact_list:
                 index = 2;
                 txt_title.setText(R.string.contacts);
+                img_right.setVisibility(View.VISIBLE);
+                if (contactlistfragment!=null){
+                    contactlistfragment.refresh();
+                }
+                img_right.setImageResource(R.drawable.icon_titleaddfriend);
                 break;
             case R.id.re_call:
                 index = 3;
@@ -184,10 +202,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.img_right:
-                if (index == 0) {
-
-                } else {
-
+                if (index == 1) {
+                    Utils.start_Activity(MainActivity.this, NewMsgActivity.class,
+                            new BasicNameValuePair(Constants.NAME,"新消息"));
+                } else if (index == 2){
+                    Utils.start_Activity(MainActivity.this, NewFriendActivity.class,
+                            new BasicNameValuePair(Constants.NAME,"添加朋友"));
                 }
         }
     }

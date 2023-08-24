@@ -27,6 +27,7 @@
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:gravity="center">
+
                 <ImageView
                     android:id="@+id/ib_main"
                     android:layout_width="wrap_content"
@@ -34,7 +35,7 @@
                     android:layout_centerHorizontal="true"
                     android:focusable="false"
                     android:scaleType="centerInside"
-                    android:src="@drawable/tab_main"/>
+                    android:src="@drawable/tab_main" />
                 <TextView
                     android:id="@+id/tv_main"
                     android:layout_width="wrap_content"
@@ -60,7 +61,7 @@
             </RelativeLayout>
         </RelativeLayout>
         <RelativeLayout
-            android:id="@+id/re_weixin"
+            android:id="@+id/re_message"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -74,7 +75,7 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:id="@+id/ib_weixin"
+                    android:id="@+id/ib_message"
                     android:layout_width="wrap_content"
                     android:layout_height="28dp"
                     android:layout_centerHorizontal="true"
@@ -87,7 +88,7 @@
                     android:id="@+id/tv_weixin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/ib_weixin"
+                    android:layout_below="@id/ib_message"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="3dp"
                     android:text="@string/chat"

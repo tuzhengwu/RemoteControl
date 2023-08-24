@@ -12,29 +12,29 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.LinearLayout.LayoutParams;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import com.cetc7.remotecontrol.Constants;
 import com.cetc7.remotecontrol.GloableParams;
 import com.cetc7.remotecontrol.R;
+import com.cetc7.remotecontrol.adpter.ContactAdapter;
 import com.cetc7.remotecontrol.bean.User;
 import com.cetc7.remotecontrol.common.Utils;
-
+import com.cetc7.remotecontrol.view.activity.FriendMsgActivity;
+import com.cetc7.remotecontrol.view.activity.NewFriendActivity;
+import com.cetc7.remotecontrol.widght.SideBar;
+import net.tsz.afinal.FinalDb;
 import androidx.fragment.app.Fragment;
 
-
 //通讯录
-
-public class Fragment_Friends extends Fragment implements OnClickListener{
+public class Fragment_Friends extends Fragment implements OnClickListener,OnItemClickListener{
 	private Activity ctx;
-	private View layout, layout_head;
+	private View layout,layout_head;
 	private ListView lvContact;
-//	private SideBar indexBar;
+	private SideBar indexBar;
 	private TextView mDialogText;
 	private WindowManager mWindowManager;
-
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -45,8 +45,8 @@ public class Fragment_Friends extends Fragment implements OnClickListener{
 			mWindowManager = (WindowManager) ctx
 					.getSystemService(Context.WINDOW_SERVICE);
 			initViews();
-//			initData();
-//			setOnListener();
+			initData();
+			setOnListener();
 		} else {
 			ViewGroup parent = (ViewGroup) layout.getParent();
 			if (parent != null) {
@@ -56,31 +56,34 @@ public class Fragment_Friends extends Fragment implements OnClickListener{
 		return layout;
 	}
 
+	@Override
+	public void onResume() {
+		super.onResume();
+		initData();
+	}
+
 	private void initViews() {
 		lvContact = (ListView) layout.findViewById(R.id.lvContact);
-
-//		mDialogText = (TextView) LayoutInflater.from(getActivity()).inflate(
-//				R.layout.list_position, null);
-//		mDialogText.setVisibility(View.INVISIBLE);
-//		indexBar = (SideBar) layout.findViewById(R.id.sideBar);
-//		indexBar.setListView(lvContact);
-//		WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
-//				LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT,
-//				WindowManager.LayoutParams.TYPE_APPLICATION,
-//				WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE
-//						| WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
-//				PixelFormat.TRANSLUCENT);
-//		mWindowManager.addView(mDialogText, lp);
-//		indexBar.setTextView(mDialogText);
-//		layout_head = ctx.getLayoutInflater().inflate(
-//				R.layout.layout_head_friend, null);
-//		lvContact.addHeaderView(layout_head);
-
+		mDialogText = (TextView) LayoutInflater.from(getActivity()).inflate(
+				R.layout.list_position, null);
+		mDialogText.setVisibility(View.INVISIBLE);
+		indexBar = (SideBar) layout.findViewById(R.id.sideBar);
+		indexBar.setListView(lvContact);
+		WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+				LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT,
+				WindowManager.LayoutParams.TYPE_APPLICATION,
+				WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE
+						| WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
+				PixelFormat.TRANSLUCENT);
+		mWindowManager.addView(mDialogText, lp);
+		indexBar.setTextView(mDialogText);
+		layout_head = ctx.getLayoutInflater().inflate(
+				R.layout.layout_head_friend, null);
+		lvContact.addHeaderView(layout_head);
 	}
 
 	@Override
 	public void onDestroy() {
-		mWindowManager.removeView(mDialogText);
 		super.onDestroy();
 	}
 
@@ -88,54 +91,55 @@ public class Fragment_Friends extends Fragment implements OnClickListener{
 	/**
 	 * 刷新页面
 	 */
-//	public void refresh() {
-//		initData();
-//	}
+	public void refresh() {
+		initData();
+	}
 
-//	private void initData() {
-//		if (GloableParams.UserInfos != null) {
-//			lvContact.setAdapter(new ContactAdapter(getActivity(),
-//					GloableParams.UserInfos));
-//		} else {
-//			FinalDb db = FinalDb
-//					.create(getActivity(), Constants.DB_NAME, false);
-//			GloableParams.UserInfos = db.findAllByWhere(User.class, "type='N'");
-//			lvContact.setAdapter(new ContactAdapter(getActivity(),
-//					GloableParams.UserInfos));
-//			for (User user : GloableParams.UserInfos) {
-//				GloableParams.Users.put(user.getTelephone(), user);
-//			}
-//			 Intent intent = new Intent(getActivity(), UpdateService.class);
-//			 getActivity().startService(intent);
-//		}
-//	}
+	private void initData() {
+		if (GloableParams.UserInfos != null) {
+			lvContact.setAdapter(new ContactAdapter(getActivity(),
+					GloableParams.UserInfos));
+		} else {
+			FinalDb db = FinalDb
+					.create(getActivity(), Constants.DB_NAME,false);
+			GloableParams.UserInfos = db.findAll(User.class);
 
-//	private void setOnListener() {
-//		lvContact.setOnItemClickListener(this);
-//		layout_head.findViewById(R.id.layout_addfriend)
-//				.setOnClickListener(this);
-//		layout_head.findViewById(R.id.layout_search).setOnClickListener(this);
-//		layout_head.findViewById(R.id.layout_group).setOnClickListener(this);
-//		layout_head.findViewById(R.id.layout_public).setOnClickListener(this);
-//	}
+			lvContact.setAdapter(new ContactAdapter(getActivity(),
+					GloableParams.UserInfos));
+			for (User user : GloableParams.UserInfos) {
+				GloableParams.Users.put(user.getTelephone(), user);
+			}
+//			Intent intent = new Intent(getActivity(), UpdateService.class);
+//			getActivity().startService(intent);
+		}
+	}
+
+	private void setOnListener() {
+		lvContact.setOnItemClickListener(this);
+		layout_head.findViewById(R.id.layout_addfriend).setOnClickListener(this);
+	}
 
 	@Override
 	public void onClick(View v) {
-//		switch (v.getId()) {
-//		case R.id.layout_search:// 搜索好友及公众号
-//			Utils.start_Activity(getActivity(), SearchActivity.class);
-//			break;
-//		case R.id.layout_addfriend:// 添加好友
-//			Utils.start_Activity(getActivity(), NewFriendsListActivity.class);
-//			break;
-//		case R.id.layout_group:// 群聊
-//			Utils.start_Activity(getActivity(), GroupListActivity.class);
-//			break;
-//		case R.id.layout_public:// 公众号
-//			Utils.start_Activity(getActivity(), PublishUserListActivity.class);
-//			break;
-//		default:
-//			break;
-//		}
+		switch (v.getId()) {
+			case R.id.layout_addfriend:// 添加好友
+				Utils.start_Activity(getActivity(), NewFriendActivity.class);
+				break;
+			default:
+				break;
+		}
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		User user = GloableParams.UserInfos.get(position-1);
+		if (user != null) {
+			Intent intent = new Intent(getActivity(), FriendMsgActivity.class);
+			intent.putExtra(Constants.NAME, user.getUserName());
+			intent.putExtra(Constants.User_ID,user.getTelephone());
+			getActivity().startActivity(intent);
+			getActivity().overridePendingTransition(R.anim.push_left_in,
+					R.anim.push_left_out);
+		}
 	}
 }

@@ -67,13 +67,15 @@ public interface Constants {
 	String IsVideo = "IsVideo";
 	String IsZhen = "IsZhen";
 	String User_ID = "User_ID";
+	String User_Phone = "User_Phone";
+	String User_Name = "User_Name";
 	String GROUP_ID = "GROUP_ID";
 	String TYPE = "TYPE";
 	// JSON status
 	String Info = "info";
 	String Value = "data";
 	String Result = "status";
-	String DB_NAME = "WeChat.db";
+	String DB_NAME = "RemoteControl.db";
 	String NET_ERROR = "网络错误，请稍后再试！";
 	String BaiduPullKey = "Uvw5AMP15i9v1cUoS5aY7GR1";
 	// 主机地址

@@ -4,6 +4,7 @@
     package="com.cetc7.remotecontrol">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
@@ -12,7 +13,7 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,14 +21,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".view.activity.ProtocolSetActivity"/>
         <activity android:name=".view.activity.ProtocolGetActivity"/>
         <activity android:name=".view.activity.ProtocolReportActivity"/>
         <activity android:name=".view.activity.TestSetActivity"/>
-
+        <activity android:name=".view.activity.FriendMsgActivity"/>
+        <activity android:name=".view.activity.NewFriendActivity"/>
         <activity android:name=".view.activity.ListViewActivity"/>
         <activity android:name=".view.activity.ParamSetActivity"/>
         <activity android:name=".view.activity.PublicActivity"/>
+        <activity android:name=".view.activity.DebugModeActivity"/>
+        <service android:name=".view.UpdateService"></service>
     </application>
 
 </manifest>

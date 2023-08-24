@@ -1,8 +1,6 @@
 package com.cetc7.remotecontrol;
 
-import com.cetc7.remotecontrol.bean.GroupInfo;
 import com.cetc7.remotecontrol.bean.User;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -16,8 +14,6 @@ public class GloableParams {
 	public static int WIN_HEIGHT;
 	public static Map<String, User> Users = new HashMap<String, User>();
 	public static List<User> UserInfos = new ArrayList<User>();// 好友信息
-	public static List<GroupInfo> ListGroupInfos = new ArrayList<GroupInfo>();// 群聊信息
-	public static Map<String, GroupInfo> GroupInfos = new HashMap<String, GroupInfo>();
 	public static Boolean isHasPulicMsg = false;
 
 	public static final byte ProtocolFrame_Head = (byte) 0x7e;
